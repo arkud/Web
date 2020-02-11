@@ -1,0 +1,8 @@
+.js/
+.img/
+.doc/
+*.ico
+*.png
+*.webmanifest
+*.xml
+
