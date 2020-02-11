@@ -1,0 +1,11 @@
+commit d16f6869fa584ac2b794e8524f164f1f54a10660 (HEAD -> master)
+Author: arkud <artyomiius@gmail.com>
+Date:   Tue Feb 11 10:25:36 2020 +0300
+
+    add status.txt
+
+commit 432d07e82a4ebae5d02a6f38f1dced68a396ff1d
+Author: arkud <artyomiius@gmail.com>
+Date:   Tue Feb 11 10:19:49 2020 +0300
+
+    add .gitignore
