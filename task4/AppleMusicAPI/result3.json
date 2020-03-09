@@ -1,0 +1,50 @@
+{
+    "resultCount": 2,
+    "results": [
+        {
+            "wrapperType": "collection",
+            "collectionType": "Album",
+            "artistId": 464296584,
+            "collectionId": 1474669063,
+            "amgArtistId": 2487752,
+            "artistName": "Lana Del Rey",
+            "collectionName": "Norman F*****g Rockwell!",
+            "collectionCensoredName": "Norman F*****g Rockwell!",
+            "artistViewUrl": "https://music.apple.com/us/artist/lana-del-rey/464296584?uo=4",
+            "collectionViewUrl": "https://music.apple.com/us/album/norman-f-g-rockwell/1474669063?uo=4",
+            "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/ac/68/63/ac6863d0-33a3-9846-587d-87b8adc9ec70/source/60x60bb.jpg",
+            "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/ac/68/63/ac6863d0-33a3-9846-587d-87b8adc9ec70/source/100x100bb.jpg",
+            "collectionPrice": 6.99,
+            "collectionExplicitness": "explicit",
+            "contentAdvisoryRating": "Explicit",
+            "trackCount": 14,
+            "copyright": "A Polydor Records Release / An Interscope Records Release In The USA; ℗ 2019 Lana Del Rey, under exclusive licence to Universal Music Operations Limited",
+            "country": "USA",
+            "currency": "USD",
+            "releaseDate": "2019-08-30T07:00:00Z",
+            "primaryGenreName": "Alternative"
+        },
+        {
+            "wrapperType": "collection",
+            "collectionType": "Album",
+            "artistId": 1439866258,
+            "collectionId": 1488153800,
+            "artistName": "Nightcore God",
+            "collectionName": "Norman f*****g Rockwell - Single",
+            "collectionCensoredName": "Norman f*****g Rockwell - Single",
+            "artistViewUrl": "https://music.apple.com/us/artist/nightcore-god/1439866258?uo=4",
+            "collectionViewUrl": "https://music.apple.com/us/album/norman-f-g-rockwell-single/1488153800?uo=4",
+            "artworkUrl60": "https://is3-ssl.mzstatic.com/image/thumb/Music113/v4/40/af/67/40af67b2-f5c9-8cd2-72dc-d449bb0719a6/source/60x60bb.jpg",
+            "artworkUrl100": "https://is3-ssl.mzstatic.com/image/thumb/Music113/v4/40/af/67/40af67b2-f5c9-8cd2-72dc-d449bb0719a6/source/100x100bb.jpg",
+            "collectionPrice": 0.99,
+            "collectionExplicitness": "explicit",
+            "contentAdvisoryRating": "Explicit",
+            "trackCount": 1,
+            "copyright": "℗ 2019 Nightcore God",
+            "country": "USA",
+            "currency": "USD",
+            "releaseDate": "2019-11-15T08:00:00Z",
+            "primaryGenreName": "Pop"
+        }
+    ]
+}
