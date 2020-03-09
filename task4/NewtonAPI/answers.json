@@ -1,0 +1,17 @@
+{
+    "operation": "derive",
+    "expression": "x^2",
+    "result": "2 x"
+}
+
+{
+    "operation": "integrate",
+    "expression": "x^2+2x",
+    "result": "1/3 x^3 + x^2"
+}
+
+{
+    "operation": "simplify",
+    "expression": "2^2+2(2)",
+    "result": "8"
+}
