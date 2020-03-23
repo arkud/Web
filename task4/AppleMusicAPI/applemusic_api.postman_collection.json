@@ -1,0 +1,131 @@
+{
+	"info": {
+		"_postman_id": "e88c6af0-5201-4fb9-ac2d-620e456c5f68",
+		"name": "applemusic_api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://itunes.apple.com/search?entity=album&term=norman+fucking+rockwell",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://itunes.apple.com/search?entity=album&term=norman+fucking+rockwell",
+					"protocol": "https",
+					"host": [
+						"itunes",
+						"apple",
+						"com"
+					],
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "attribute",
+							"value": "music",
+							"disabled": true
+						},
+						{
+							"key": "id",
+							"value": "464296584",
+							"disabled": true
+						},
+						{
+							"key": "entity",
+							"value": "album"
+						},
+						{
+							"key": "upc",
+							"value": "1474669063",
+							"disabled": true
+						},
+						{
+							"key": "term",
+							"value": "norman+fucking+rockwell"
+						},
+						{
+							"key": "entity",
+							"value": "music",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://itunes.apple.com/search?term=lana+del+rey",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://itunes.apple.com/search?term=lana+del+rey",
+					"protocol": "https",
+					"host": [
+						"itunes",
+						"apple",
+						"com"
+					],
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "term",
+							"value": "lana+del+rey"
+						},
+						{
+							"key": "attribute",
+							"value": "music",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://itunes.apple.com/lookup?id=464296584&entity=album",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://itunes.apple.com/lookup?id=464296584&entity=album",
+					"protocol": "https",
+					"host": [
+						"itunes",
+						"apple",
+						"com"
+					],
+					"path": [
+						"lookup"
+					],
+					"query": [
+						{
+							"key": "term",
+							"value": "lana+del+rey",
+							"disabled": true
+						},
+						{
+							"key": "attribute",
+							"value": "music",
+							"disabled": true
+						},
+						{
+							"key": "id",
+							"value": "464296584"
+						},
+						{
+							"key": "entity",
+							"value": "album"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

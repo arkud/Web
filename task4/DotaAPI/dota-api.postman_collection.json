@@ -1,0 +1,101 @@
+{
+	"info": {
+		"_postman_id": "52829b40-e7fb-4b00-b5c8-2c0b1971f5df",
+		"name": "dota-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://api.opendota.com/api/scenarios/itemTimings",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.opendota.com/api/scenarios/itemTimings",
+					"protocol": "https",
+					"host": [
+						"api",
+						"opendota",
+						"com"
+					],
+					"path": [
+						"api",
+						"scenarios",
+						"itemTimings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://api.opendota.com/api/heroes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.opendota.com/api/heroes",
+					"protocol": "https",
+					"host": [
+						"api",
+						"opendota",
+						"com"
+					],
+					"path": [
+						"api",
+						"heroes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://api.opendota.com/api/matches/5280367616",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.opendota.com/api/matches/5280367616",
+					"protocol": "https",
+					"host": [
+						"api",
+						"opendota",
+						"com"
+					],
+					"path": [
+						"api",
+						"matches",
+						"5280367616"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://api.opendota.com/api/request/5280367616",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://api.opendota.com/api/request/5280367616",
+					"protocol": "https",
+					"host": [
+						"api",
+						"opendota",
+						"com"
+					],
+					"path": [
+						"api",
+						"request",
+						"5280367616"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
