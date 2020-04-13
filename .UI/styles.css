@@ -8,6 +8,18 @@ span {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+span.chirik-additions > a{
+    color: tomato;
+    text-decoration: none;
+    border: 0 solid white;
+    border-radius: 500px;
+    padding: 3px 5px 3px 5px;
+}
+
+span.chirik-additions > a:hover{
+    background-color: rgba(255, 160, 122, 0.3);
+}
+
 .top-bar {
     height: 50px;
     width: 100%;
@@ -25,10 +37,10 @@ span {
     border: 1px solid grey;
 }
 
-.content{
+.poll-content{
     display: flex;
     flex-direction: row;
-    height: 20%;
+    height: auto;
     width: 100%;
 }
 
@@ -38,18 +50,21 @@ span {
     flex-wrap: nowrap;
     margin-left: 10px;
     margin-right: 0;
+    margin-top: 12px;
     width: 100%;
 }
 
-.chirik-form >{
-
+.chirik-post{
+    border-collapse: collapse;
+    border: 0 solid grey;
+    border-bottom-width: 1px;
+    height: auto;
 }
 
 .chirik-field{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    margin-top: 12px;
     width: 100%;
 }
 
@@ -57,6 +72,7 @@ span {
     display: flex;
     height: 100%;
     width: 80%;
+    margin-left: 8px;
 }
 .input-field > span{
     padding-top: 12px;
@@ -95,32 +111,33 @@ span {
     border-radius: 500px;
     font-size: 20px;
     vertical-align: center;
-
     font-weight: bold;
 }
 
 .avatar{
-    width: 60px;
-    height: 60px;
-    border: 1px solid white;
+    width: 48px;
+    height: 48px;
+    border: 0 solid grey;
     border-radius: 500px;
 }
 
-*.ref > a > button {
+*.ref > button {
     width: 100%;
-    border: 2px solid tomato;
+    margin-top: 8px;
     padding: 10px 20px 10px 10px;
-    border-radius: 500px;
     font-size: 20px;
+}
+
+.chirik-button{
+    font-weight: bold;
+    border: 2px solid tomato;
+    border-radius: 500px;
     color: white;
-    vertical-align: center;
     text-align: center;
     background-color: tomato;
-
-    font-weight: bold;
 }
 
-*.ref > a > button:hover {
+.chirik-button:hover{
     background-color: #e2583b;
     border-color: #e2583b;
 }
