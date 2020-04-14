@@ -1,14 +1,24 @@
 .left {
-    width: 25%;
+    width: 20%;
     margin: 0;
     position: fixed;
 }
 
-span {
-    font-family: Arial, Helvetica, sans-serif;
+a {
+    text-decoration: none;
+    color: black;
 }
 
-span.chirik-additions > a{
+span {
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.5px;
+}
+
+.chirik-additions{
+    font-size: 15px;
+}
+
+.chirik-additions > a > i {
     color: tomato;
     text-decoration: none;
     border: 0 solid white;
@@ -16,28 +26,54 @@ span.chirik-additions > a{
     padding: 3px 5px 3px 5px;
 }
 
-span.chirik-additions > a:hover{
+.chirik-additions > a:hover > i {
     background-color: rgba(255, 160, 122, 0.3);
 }
 
-.top-bar {
+.top {
+    height: 50px;
+    width: 100%;
+    position: relative;
+    z-index: 3;
+}
+
+.bar{
     height: 50px;
     width: 100%;
     position: fixed;
     background-color: grey;
 }
 
+.right{
+    position: relative;
+    width: 30%;
+    margin-left: 70%;
+}
+
+.relevant{
+    width: 80%;
+    position: sticky;
+}
+
+.box{
+    border: 1px grey solid;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
 .center {
     display: flex;
     flex-direction: column;
-    margin-top: 49px;
-    position: fixed;
+    position: absolute;
     width: 45%;
-    margin-left: 25%;
+    margin-left: 23%;
     border: 1px solid grey;
+    border-top: 0;
+    border-collapse: collapse;
 }
 
-.poll-content{
+.poll-content {
     display: flex;
     flex-direction: row;
     height: auto;
@@ -52,42 +88,85 @@ span.chirik-additions > a:hover{
     margin-right: 0;
     margin-top: 12px;
     width: 100%;
+    height: auto;
 }
 
-.chirik-post{
+.chirik-post {
     border-collapse: collapse;
     border: 0 solid grey;
     border-bottom-width: 1px;
     height: auto;
+    padding-bottom: 7px;
 }
 
-.chirik-field{
+.chirik-field {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     width: 100%;
+    height: auto;
+    margin-left: 10px;
+    margin-right: 0;
+    margin-top: 12px;
 }
 
-.input-field{
+.chirik-indentification {
     display: flex;
-    height: 100%;
-    width: 80%;
-    margin-left: 8px;
+    justify-content: space-between;
+    height: auto;
+    vertical-align: central;
+    font-size: 14px;
+    padding-top: 2px;
+    width: 100%;
 }
-.input-field > span{
-    padding-top: 12px;
+
+
+.chirik-content {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    height: auto;
+    width: 100%;
+    margin-left: 8px;
+    padding-right: 7px;
+}
+
+.input-field {
+    min-height: 40px;
+    margin-top: 8px;
+}
+
+.chirik{
+    word-wrap: break-word;
+    padding-top: 1px;
+    margin-bottom: 5px;
+}
+
+.image{
+    overflow: hidden;
+    margin-top: 10px;
+    vertical-align: middle;
+    width: 100%;
+}
+.image > img{
+    width: 99%;
+    max-height: 300px;
+    object-fit: fill;
+    vertical-align: middle;
+    position: relative;
+    border: 1px grey solid;
+    border-radius: 20px;
 }
 
 .full-screen {
-    position: static;
+    position: absolute;
     width: 100%;
-    height: 100%;
+    height: auto;
     margin: 0;
-    background-color: #e7e7e7;
 }
 
 .full-height {
-    height: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
 }
@@ -114,8 +193,8 @@ span.chirik-additions > a:hover{
     font-weight: bold;
 }
 
-.avatar{
-    width: 48px;
+.avatar {
+    min-width: 48px;
     height: 48px;
     border: 0 solid grey;
     border-radius: 500px;
@@ -124,11 +203,11 @@ span.chirik-additions > a:hover{
 *.ref > button {
     width: 100%;
     margin-top: 8px;
-    padding: 10px 20px 10px 10px;
+    padding: 10px 10px 10px 10px;
     font-size: 20px;
 }
 
-.chirik-button{
+.chirik-button {
     font-weight: bold;
     border: 2px solid tomato;
     border-radius: 500px;
@@ -137,7 +216,7 @@ span.chirik-additions > a:hover{
     background-color: tomato;
 }
 
-.chirik-button:hover{
+.chirik-button:hover {
     background-color: #e2583b;
     border-color: #e2583b;
 }
@@ -152,12 +231,12 @@ span.chirik-additions > a:hover{
 }
 
 .inside {
-    position: absolute;
+    position: relative;
 }
 
 .centered {
-    margin-right: 10%;
-    margin-left: 10%;
+    margin-right: 5%;
+    margin-left: 5%;
     display: flex;
 }
 
@@ -165,11 +244,20 @@ span.chirik-additions > a:hover{
     overflow: auto;
     height: 100%;
     width: 100%;
-    margin-top: 50px;
+    margin-left: 10px;
 }
 
 .icon {
     font-size: 24px;
     margin-right: 15px;
     vertical-align: bottom;
+}
+
+.show{
+    text-align: center;
+    padding: 8px;
+    width: 100%;
+}
+.show:hover{
+    background-color: rgba(255, 160, 122, 0.3);
 }

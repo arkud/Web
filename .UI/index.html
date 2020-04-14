@@ -8,54 +8,322 @@
 </head>
 <body style="margin: 0; height: 100%">
 <div class="full-screen">
-    <div class="top-bar"></div>
+    <div class="top">
+        <div class="bar"></div>
+    </div>
     <div class="left full-height">
         <header class="full-height">
-            <div class="full-height centered inside" style="width: 80%">
-                <div class="full-height navigation inside">
-                    <nav class="ref inside centered">
-                        <a href="#Main"><span class="active"><i class="fas fa-home icon"></i>Главная</span></a>
-                        <a href="#Main"><span><i class="fas fa-user-alt icon"></i>Профиль</span></a>
-                        <a href="#Main"><span><i class="far fa-bell icon"></i>Уведомления</span></a>
-                        <a href="#Main"><span><i class="far fa-comment icon"></i>Сообщения</span></a>
-                        <a href="#Main"><span><i class="fas fa-ellipsis-h icon"></i>Ещё</span></a>
-                        <button class="chirik-button"><span>Чирикнуть</span></button>
-                    </nav>
-                </div>
+            <div class="full-height navigation inside">
+                <nav class="ref inside centered">
+                    <a href="#Main"><span class="active"><i class="fas fa-home icon"></i>Главная</span></a>
+                    <a href="#Main"><span><i class="fas fa-user-alt icon"></i>Профиль</span></a>
+                    <a href="#Main"><span><i class="far fa-bell icon"></i>Уведомления</span></a>
+                    <a href="#Main"><span><i class="far fa-comment icon"></i>Сообщения</span></a>
+                    <a href="#Main"><span><i class="fas fa-ellipsis-h icon"></i>Ещё</span></a>
+                    <button class="chirik-button"><span>Чирикнуть</span></button>
+                </nav>
             </div>
         </header>
     </div>
     <div class="center full-height">
-        <main class="full-height">
+        <main class="full-height" style="position: relative">
             <div class="poll-content">
-                <div class="chirik-form">
-                    <div class="chirik-field">
-                        <img src="zZuTNe0PW34.jpg" class="avatar" alt="gf">
-                        <div class="input-field"><span>Текст</span></div>
-                    </div>
-                    <div style="display:flex; flex-direction: row;margin-left: 9%; justify-content: space-between;">
-                        <div style="margin-top: 6px;"><span style="font-size: 20px" class="chirik-additions">
+                <div class="chirik-field">
+                    <img src="zZuTNe0PW34.jpg" class="avatar" alt="gf">
+                    <div class="chirik-content">
+                        <div class="input-field">
+                            <span>Текст</span>
+                        </div>
+                        <div style="display:flex; flex-direction: row; justify-content: space-between;">
+                            <div style="margin-top: 6px;"><span style="font-size: 20px" class="chirik-additions">
                             <a href="#Image"><i class="far fa-image"></i></a>
                             <a href="#Smile"><i class="far fa-smile"></i></a>
                             <a href="#Poll"><i class="fas fa-poll-h"></i></a></span>
-                        </div>
-                        <div>
-                            <button class="chirik-button" style="padding: 6px 10px 6px 10px; margin-right: 5px">
-                                <span>Чирикнуть</span></button>
+                            </div>
+                            <div>
+                                <button class="chirik-button" style="padding: 6px 10px 6px 10px; margin-right: 5px">
+                                    <span>Чирикнуть</span></button>
+                            </div>
                         </div>
                     </div>
                 </div>
+
             </div>
 
             <div style="display: flex; background-color: rgba(118,63,51,0.58);height: 10px;width: 100%;margin-top: 4px">
             </div>
 
             <div class="poll-content chirik-post">
-                <div class="chirik-form">
+                <div class="chirik-field">
                     <img src="zZuTNe0PW34.jpg" class="avatar" alt="gf">
+                    <div class="chirik-content">
+                        <div class="chirik-indentification">
+                            <div>
+                                <a href="#Profile">
+                                    <span style="font-weight: bold">Artsiom Kudryavtsev</span>
+                                </a>
+                                <a href="#Profile">
+                                    <span style="color: rgba(0,0,0,0.6)">@ar_kud<time> 20ч</time></span>
+                                </a>
+                            </div>
+                            <div class="chirik-additions">
+                                <a href="#Options"><i class="fas fa-chevron-down"></i></a>
+                            </div>
+                        </div>
+                        <div class="chirik">
+                            <span>Как же хорошо, что у меня наконец появилось время подтянуть все свои долги!</span>
+                            <div class="image"><img src="47998110-hooray-hooray-word-yellow-hand-lettering-positive-saying-hand-lettering-for-cards-posters-and-social.jpg" alt=""></div>
+                        </div>
+                        <div class="chirik-additions">
+                            <a href="#Like"><i class="far fa-heart"></i><span style="padding-left: 2px">1000</span></a>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <div class="poll-content chirik-post">
+                <div class="chirik-field">
+                    <img src="zZuTNe0PW34.jpg" class="avatar" alt="gf">
+                    <div class="chirik-content">
+                        <div class="chirik-indentification">
+                            <div>
+                                <a href="#Profile">
+                                    <span style="font-weight: bold">Artsiom Kudryavtsev</span>
+                                </a>
+                                <a href="#Profile">
+                                    <span style="color: rgba(0,0,0,0.6)">@ar_kud<time> 20ч</time></span>
+                                </a>
+                            </div>
+                            <div class="chirik-additions">
+                                <a href="#Options"><i class="fas fa-chevron-down"></i></a>
+                            </div>
+                        </div>
+                        <div class="chirik">
+                            <span>Как же хорошо, что у меня наконец появилось время подтянуть все свои долги!</span>
+                        </div>
+                        <div class="chirik-additions">
+                            <a href="#Like"><i class="far fa-heart"></i><span style="padding-left: 2px">1000</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="poll-content chirik-post">
+                <div class="chirik-field">
+                    <img src="zZuTNe0PW34.jpg" class="avatar" alt="gf">
+                    <div class="chirik-content">
+                        <div class="chirik-indentification">
+                            <div>
+                                <a href="#Profile">
+                                    <span style="font-weight: bold">Artsiom Kudryavtsev</span>
+                                </a>
+                                <a href="#Profile">
+                                    <span style="color: rgba(0,0,0,0.6)">@ar_kud<time> 20ч</time></span>
+                                </a>
+                            </div>
+                            <div class="chirik-additions">
+                                <a href="#Options"><i class="fas fa-chevron-down"></i></a>
+                            </div>
+                        </div>
+                        <div class="chirik">
+                            <span>Как же хорошо, что у меня наконец появилось время подтянуть все свои долги!</span>
+                        </div>
+                        <div class="chirik-additions">
+                            <a href="#Like"><i class="far fa-heart"></i><span style="padding-left: 2px">1000</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="poll-content chirik-post">
+                <div class="chirik-field">
+                    <img src="zZuTNe0PW34.jpg" class="avatar" alt="gf">
+                    <div class="chirik-content">
+                        <div class="chirik-indentification">
+                            <div>
+                                <a href="#Profile">
+                                    <span style="font-weight: bold">Artsiom Kudryavtsev</span>
+                                </a>
+                                <a href="#Profile">
+                                    <span style="color: rgba(0,0,0,0.6)">@ar_kud<time> 20ч</time></span>
+                                </a>
+                            </div>
+                            <div class="chirik-additions">
+                                <a href="#Options"><i class="fas fa-chevron-down"></i></a>
+                            </div>
+                        </div>
+                        <div class="chirik">
+                            <span>Как же хорошо, что у меня наконец появилось время подтянуть все свои долги!</span>
+                        </div>
+                        <div class="chirik-additions">
+                            <a href="#Like"><i class="far fa-heart"></i><span style="padding-left: 2px">1000</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="poll-content chirik-post">
+                <div class="chirik-field">
+                    <img src="zZuTNe0PW34.jpg" class="avatar" alt="gf">
+                    <div class="chirik-content">
+                        <div class="chirik-indentification">
+                            <div>
+                                <a href="#Profile">
+                                    <span style="font-weight: bold">Artsiom Kudryavtsev</span>
+                                </a>
+                                <a href="#Profile">
+                                    <span style="color: rgba(0,0,0,0.6)">@ar_kud<time> 20ч</time></span>
+                                </a>
+                            </div>
+                            <div class="chirik-additions">
+                                <a href="#Options"><i class="fas fa-chevron-down"></i></a>
+                            </div>
+                        </div>
+                        <div class="chirik">
+                            <span>Как же хорошо, что у меня наконец появилось время подтянуть все свои долги!</span>
+                        </div>
+                        <div class="chirik-additions">
+                            <a href="#Like"><i class="far fa-heart"></i><span style="padding-left: 2px">1000</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="poll-content chirik-post">
+                <div class="chirik-field">
+                    <img src="zZuTNe0PW34.jpg" class="avatar" alt="gf">
+                    <div class="chirik-content">
+                        <div class="chirik-indentification">
+                            <div>
+                                <a href="#Profile">
+                                    <span style="font-weight: bold">Artsiom Kudryavtsev</span>
+                                </a>
+                                <a href="#Profile">
+                                    <span style="color: rgba(0,0,0,0.6)">@ar_kud<time> 20ч</time></span>
+                                </a>
+                            </div>
+                            <div class="chirik-additions">
+                                <a href="#Options"><i class="fas fa-chevron-down"></i></a>
+                            </div>
+                        </div>
+                        <div class="chirik">
+                            <span>Как же хорошо, что у меня наконец появилось время подтянуть все свои долги!</span>
+                        </div>
+                        <div class="chirik-additions">
+                            <a href="#Like"><i class="far fa-heart"></i><span style="padding-left: 2px">1000</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="poll-content chirik-post">
+                <div class="chirik-field">
+                    <img src="zZuTNe0PW34.jpg" class="avatar" alt="gf">
+                    <div class="chirik-content">
+                        <div class="chirik-indentification">
+                            <div>
+                                <a href="#Profile">
+                                    <span style="font-weight: bold">Artsiom Kudryavtsev</span>
+                                </a>
+                                <a href="#Profile">
+                                    <span style="color: rgba(0,0,0,0.6)">@ar_kud<time> 20ч</time></span>
+                                </a>
+                            </div>
+                            <div class="chirik-additions">
+                                <a href="#Options"><i class="fas fa-chevron-down"></i></a>
+                            </div>
+                        </div>
+                        <div class="chirik">
+                            <span>Как же хорошо, что у меня наконец появилось время подтянуть все свои долги!</span>
+                        </div>
+                        <div class="chirik-additions">
+                            <a href="#Like"><i class="far fa-heart"></i><span style="padding-left: 2px">1000</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="poll-content chirik-post">
+                <div class="chirik-field">
+                    <img src="zZuTNe0PW34.jpg" class="avatar" alt="gf">
+                    <div class="chirik-content">
+                        <div class="chirik-indentification">
+                            <div>
+                                <a href="#Profile">
+                                    <span style="font-weight: bold">Artsiom Kudryavtsev</span>
+                                </a>
+                                <a href="#Profile">
+                                    <span style="color: rgba(0,0,0,0.6)">@ar_kud<time> 20ч</time></span>
+                                </a>
+                            </div>
+                            <div class="chirik-additions">
+                                <a href="#Options"><i class="fas fa-chevron-down"></i></a>
+                            </div>
+                        </div>
+                        <div class="chirik">
+                            <span>Как же хорошо, что у меня наконец появилось время подтянуть все свои долги!</span>
+                        </div>
+                        <div class="chirik-additions">
+                            <a href="#Like"><i class="far fa-heart"></i><span style="padding-left: 2px">1000</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="poll-content chirik-post">
+                <div class="chirik-field">
+                    <img src="zZuTNe0PW34.jpg" class="avatar" alt="gf">
+                    <div class="chirik-content">
+                        <div class="chirik-indentification">
+                            <div>
+                                <a href="#Profile">
+                                    <span style="font-weight: bold">Artsiom Kudryavtsev</span>
+                                </a>
+                                <a href="#Profile">
+                                    <span style="color: rgba(0,0,0,0.6)">@ar_kud<time> 20ч</time></span>
+                                </a>
+                            </div>
+                            <div class="chirik-additions">
+                                <a href="#Options"><i class="fas fa-chevron-down"></i></a>
+                            </div>
+                        </div>
+                        <div class="chirik">
+                            <span>Как же хорошо, что у меня наконец появилось время подтянуть все свои долги!</span>
+                        </div>
+                        <div class="chirik-additions">
+                            <a href="#Like"><i class="far fa-heart"></i><span style="padding-left: 2px">1000</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="poll-content chirik-post">
+                <div class="chirik-field">
+                    <img src="zZuTNe0PW34.jpg" class="avatar" alt="gf">
+                    <div class="chirik-content">
+                        <div class="chirik-indentification">
+                            <div>
+                                <a href="#Profile">
+                                    <span style="font-weight: bold">Artsiom Kudryavtsev</span>
+                                </a>
+                                <a href="#Profile">
+                                    <span style="color: rgba(0,0,0,0.6)">@ar_kud<time> 20ч</time></span>
+                                </a>
+                            </div>
+                            <div class="chirik-additions">
+                                <a href="#Options"><i class="fas fa-chevron-down"></i></a>
+                            </div>
+                        </div>
+                        <div class="chirik">
+                            <span>Как же хорошо, что у меня наконец появилось время подтянуть все свои долги!</span>
+                        </div>
+                        <div class="chirik-additions">
+                            <a href="#Like"><i class="far fa-heart"></i><span style="padding-left: 2px">1000</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="poll-content"><a href="#ShowMore" class="show"><span>Показать ещё</span></a></div>
         </main>
+    </div>
+    <div class="right full-height">
+        <div class="full-height relevant">
+            <div class="box">
+                <div>Актуальные хэштэги</div>
+                <div class="show">Показать ещё</div>
+            </div>
+        </div>
     </div>
 </div>
 </body>
