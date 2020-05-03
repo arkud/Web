@@ -2,6 +2,7 @@
     width: 20%;
     margin: 0;
     position: fixed;
+    margin-top: 50px;
 }
 
 a {
@@ -14,7 +15,9 @@ span {
     letter-spacing: 0.5px;
 }
 
-.chirik-additions{
+.chirik-additions {
+    border: 0 white solid;
+    border-radius: 15px;
     font-size: 15px;
 }
 
@@ -33,33 +36,63 @@ span {
 .top {
     height: 50px;
     width: 100%;
-    position: relative;
+    position: fixed;
     z-index: 3;
 }
 
-.bar{
+.bar {
     height: 50px;
     width: 100%;
     position: fixed;
     background-color: grey;
 }
 
-.right{
+.right {
     position: relative;
     width: 30%;
-    margin-left: 70%;
+    left: 70%;
+    top: 53px;
 }
 
-.relevant{
+.relevant {
     width: 80%;
     position: sticky;
 }
 
-.box{
-    border: 1px grey solid;
-    border-radius: 30px;
+.box {
+    border: 0 rgba(128, 128, 128, 0.4) solid;
+    border-radius: 15px;
     display: flex;
     flex-direction: column;
+    border-collapse: collapse;
+    background-color: rgba(255, 99, 71, 0.1);
+    margin-bottom: 15px;
+}
+
+.popular-hashtags{
+    position: relative;
+    border-top: 1px rgba(128, 128, 128, 0.3) solid;
+    padding: 0;
+    margin: 0;
+}
+
+.popular-hashtags > li{
+    list-style-type: none;
+    border-bottom: 1px rgba(128, 128, 128, 0.3) solid;
+    height: auto;
+    padding: 3px 0 3px 10px;
+    font-size: 15px;
+}
+
+.left-align{
+    text-align: left;
+    padding-left: 10px;
+}
+
+.counter{
+    font-size: 13px;
+    color: rgba(128, 128, 128, 0.68);
+    padding-right: 5px;
 }
 
 .center {
@@ -71,6 +104,7 @@ span {
     border: 1px solid grey;
     border-top: 0;
     border-collapse: collapse;
+    margin-top: 50px;
 }
 
 .poll-content {
@@ -136,19 +170,20 @@ span {
     margin-top: 8px;
 }
 
-.chirik{
+.chirik {
     word-wrap: break-word;
     padding-top: 1px;
     margin-bottom: 5px;
 }
 
-.image{
+.image {
     overflow: hidden;
     margin-top: 10px;
     vertical-align: middle;
     width: 100%;
 }
-.image > img{
+
+.image > img {
     width: 99%;
     max-height: 300px;
     object-fit: fill;
@@ -253,11 +288,64 @@ span {
     vertical-align: bottom;
 }
 
-.show{
+.show {
     text-align: center;
-    padding: 8px;
-    width: 100%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: inherit;
+    color: tomato;
 }
-.show:hover{
+
+.bold{
+    font-weight: bold;
+}
+
+.show:hover {
     background-color: rgba(255, 160, 122, 0.3);
+}
+
+.about{
+    width: 80%;
+    padding-left: 13px;
+    font-size: 12px;
+    color: gray;
+}
+
+.search{
+    padding: 12px 10px 12px 10px;
+}
+
+.hashtag{
+    color: tomato;
+}
+
+.top-content{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.top-content > div{
+    margin: 15px 10px 0 10px;
+    font-size: 18px;
+    color: white;
+}
+
+.sort{
+    padding: 1px 3px 0 2px;
+}
+
+.sort:hover{
+    border: 0 white solid;
+    border-radius: 15px;
+    background-color: rgba(255, 160, 122, 0.3);
+}
+
+.logo{
+    padding-top: 12px;
+    font-size: 25px;
+    padding-left: 7%;
+    color: white;
+}
+.logo > span{
+    text-align: right;
 }
