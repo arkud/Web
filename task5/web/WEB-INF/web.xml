@@ -35,4 +35,24 @@
         <url-pattern>/page</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>testservlet</servlet-name>
+        <servlet-class>lol.Test1Servlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>testservlet</servlet-name>
+        <url-pattern>/test1</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>test2servlet</servlet-name>
+        <servlet-class>lol.Test2Servlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>test2servlet</servlet-name>
+        <url-pattern>/test2</url-pattern>
+    </servlet-mapping>
+
 </web-app>
