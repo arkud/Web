@@ -27,7 +27,7 @@
             author: "ar_kud",
             name: "Artsiom Kudryavtsev",
             photoLink: "zZuTNe0PW34.jpg",
-            hashtags: [""],
+            hashtags: [],
             likes: ["ar_kud"]
         },
         {
@@ -37,8 +37,8 @@
             author: "ar_kud",
             name: "Artsiom Kudryavtsev",
             photoLink: "zZuTNe0PW34.jpg",
-            hashtags: [""],
-            likes: ["ar_kud"]
+            likes: ["ar_kud"],
+            hashtags: []
         },
         {
             id: '5',
@@ -47,7 +47,7 @@
             author: "ar_kud",
             name: "Artsiom Kudryavtsev",
             photoLink: "zZuTNe0PW34.jpg",
-            hashtags: [""],
+            hashtags: [],
             likes: ["ar_kud"]
         },
         {
@@ -57,7 +57,7 @@
             author: "ar_kud",
             name: "Artsiom Kudryavtsev",
             photoLink: "zZuTNe0PW34.jpg",
-            hashtags: [""],
+            hashtags: [],
             likes: ["ar_kud"]
         },
         {
@@ -67,7 +67,7 @@
             author: "ar_kud",
             name: "Artsiom Kudryavtsev",
             photoLink: "zZuTNe0PW34.jpg",
-            hashtags: [""],
+            hashtags: [],
             likes: ["ar_kud"]
         },
         {
@@ -77,7 +77,7 @@
             author: "ar_kud",
             name: "Artsiom Kudryavtsev",
             photoLink: "zZuTNe0PW34.jpg",
-            hashtags: [""],
+            hashtags: [],
             likes: ["ar_kud"]
         },
         {
@@ -87,7 +87,7 @@
             author: "ar_kud",
             name: "Artsiom Kudryavtsev",
             photoLink: "zZuTNe0PW34.jpg",
-            hashtags: [""],
+            hashtags: [],
             likes: ["ar_kud"]
         },
         {
@@ -97,7 +97,7 @@
             author: "ar_kud",
             name: "Artsiom Kudryavtsev",
             photoLink: "zZuTNe0PW34.jpg",
-            hashtags: [""],
+            hashtags: [],
             likes: ["ar_kud"]
         },
         {
@@ -107,7 +107,7 @@
             author: "ar_kud",
             name: "Artsiom Kudryavtsev",
             photoLink: "zZuTNe0PW34.jpg",
-            hashtags: [""],
+            hashtags: [],
             likes: ["ar_kud"]
         },
         {
@@ -117,7 +117,7 @@
             author: "ar_kud",
             name: "Artsiom Kudryavtsev",
             photoLink: "zZuTNe0PW34.jpg",
-            hashtags: [""],
+            hashtags: [],
             likes: ["ar_kud"]
         },
         {
@@ -127,7 +127,7 @@
             author: "ar_kud",
             name: "Artsiom Kudryavtsev",
             photoLink: "zZuTNe0PW34.jpg",
-            hashtags: [""],
+            hashtags: [],
             likes: ["ar_kud"]
         },
         {
@@ -137,7 +137,7 @@
             author: "ar_kud",
             name: "Artsiom Kudryavtsev",
             photoLink: "zZuTNe0PW34.jpg",
-            hashtags: [""],
+            hashtags: [],
             likes: ["ar_kud"]
         },
         {
@@ -147,7 +147,7 @@
             author: "ar_kud",
             name: "Artsiom Kudryavtsev",
             photoLink: "zZuTNe0PW34.jpg",
-            hashtags: [""],
+            hashtags: [],
             likes: ["ar_kud"]
         },
         {
@@ -157,7 +157,7 @@
             author: "ar_kud",
             name: "Artsiom Kudryavtsev",
             photoLink: "zZuTNe0PW34.jpg",
-            hashtags: [""],
+            hashtags: [],
             likes: ["ar_kud"]
         },
         {
@@ -167,7 +167,7 @@
             author: "ar_kud",
             name: "Artsiom Kudryavtsev",
             photoLink: "zZuTNe0PW34.jpg",
-            hashtags: [""],
+            hashtags: [],
             likes: ["ar_kud"]
         },
         {
@@ -177,7 +177,7 @@
             author: "ar_kud",
             name: "Artsiom Kudryavtsev",
             photoLink: "zZuTNe0PW34.jpg",
-            hashtags: [""],
+            hashtags: [],
             likes: ["ar_kud"]
         },
         {
@@ -187,7 +187,7 @@
             author: "ar_kud",
             name: "Artsiom Kudryavtsev",
             photoLink: "zZuTNe0PW34.jpg",
-            hashtags: [""],
+            hashtags: [],
             likes: ["ar_kud"]
         },
         {
@@ -197,7 +197,7 @@
             author: "ar_kud",
             name: "Artsiom Kudryavtsev",
             photoLink: "zZuTNe0PW34.jpg",
-            hashtags: [""],
+            hashtags: [],
             likes: ["ar_kud"]
         }
     ];
@@ -206,6 +206,47 @@
     function getPosts(skip, top, filterConfig) {
         skip = skip || 0;
         top = top || 10;
-        
+
+    }
+
+    function getPost(id) {
+        return posts.find(element => element.id === id);
+    }
+
+    function validatePost(post) {
+        if (post.id === undefined) {
+            return false;
+        }
+        if (post.description === undefined || post.description.length >= 200) {
+            return false;
+        }
+        if (post.createdAt === undefined || !(post.createdAt instanceof Date)) {
+            return false;
+        }
+        if (post.author === undefined) {
+            return false;
+        }
+        if (post.name === undefined) {
+            return false;
+        }
+        if (post.likes.filter((item, index) => post.likes.indexOf(item) !== index) === undefined) {
+            return false;
+        }
+        if (post.hashtags.filter((item, index) => post.hashtags.indexOf(item) !== index) === undefined) {
+            return false;
+        }
+        return true;
+    }
+
+    function addPost(post) {
+        if (validatePost(post)) {
+            posts.push(post);
+            return true;
+        }
+        return false;
+    }
+
+    function editPost(is, post) {
+
     }
 }());
