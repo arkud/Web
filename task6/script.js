@@ -207,9 +207,9 @@
         skip = skip || 0;
         top = top || 10;
 
-        var result = posts.slice();
+        let result = posts.slice();
 
-        if (filterConfig.hashtags !== undefined && filterConfig.hashtags !== null) {
+        if (filterConfig.hashtags) {
             result = posts.filter(function (item) {
                 if(item.hashtags === null || item.hashtags === undefined)
                     return false;
@@ -265,9 +265,9 @@
 
     function addPost(post) {
         if (validatePost(post)) {
-            var re = /#.+ /;
+            let re = /#.+ /;
             post.hashtags = re.exec(post.description);
-            if (post.hashtags !== null)
+            if (post.hashtags)
                 post.hashtags = post.hashtags.filter((elem, index) => post.hashtags
                     .indexOf(elem) === index);
             posts.push(post);
@@ -279,26 +279,26 @@
 
     function editPost(id, post) {
         console.log("Change post with id:" + id);
-        if (post.createdAt !== undefined || post.author !== undefined || post.name !== undefined || post.id !== undefined) {
+        if (post.createdAt || post.author || post.name || post.id) {
             console.log("restricted fields cannot be changed");
             return false;
         }
         if (!validatePost(getPost(id)))
             return false;
 
-        var index = posts.findIndex(element => element.id === id);
-        if (post.description !== undefined) {
+        let index = posts.findIndex(element => element.id === id);
+        if (post.description) {
             posts[index].description = post.description;
-            var re = /#.+ /;
+            let re = /#.+ /;
             posts[index].hashtags = re.exec(post.description);
-            if (posts[index].hashtags !== null)
+            if (posts[index].hashtags)
                 posts[index].hashtags = posts[index].hashtags.filter((elem, index) => posts[index].hashtags
                     .indexOf(elem) === index);
             console.log("description succesfully changed to: " + post.description.slice(0, 20) + "...");
             console.log("found hashtags " + posts[index].hashtags);
         }
 
-        if (post.likes !== undefined) {
+        if (post.likes) {
             posts[index].likes = post.likes;
             console.log("likes succesfully updated");
         }
@@ -307,7 +307,7 @@
 
     function removePost(id) {
         console.log("Remove post with id:" + id + ",");
-        var index = posts.findIndex(element => element.id === id);
+        let index = posts.findIndex(element => element.id === id);
         if (index === -1) {
             console.log(" not found\n");
             return false;
