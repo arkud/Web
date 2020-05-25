@@ -53,6 +53,15 @@ span {
     left: 70%;
     top: 53px;
 }
+@media only screen and (max-width: 1000px) {
+    .right {
+        display: none;
+        width: 0;
+        height: 0;
+        margin: 0;
+        padding: 0;
+    }
+}
 
 .relevant {
     width: 80%;
@@ -170,6 +179,13 @@ span {
     margin-top: 8px;
 }
 
+.input-field > input{
+    width: 100%;
+    outline: none;
+    border: 0;
+    height: 100%;
+}
+
 .chirik {
     word-wrap: break-word;
     padding-top: 1px;
@@ -202,8 +218,16 @@ span {
 
 .full-height {
     height: auto;
-    display: flex;
-    flex-direction: column;
+}
+
+@media only screen and (max-width: 1000px) {
+    .ref > a > span {
+        display: none;
+        width: 0;
+        height: 0;
+        margin: 0;
+        padding: 0;
+    }
 }
 
 .ref {
@@ -212,20 +236,26 @@ span {
 }
 
 *.ref > a {
+    width: max-content;
     display: flex;
     align-items: stretch;
     margin-top: 8px;
     text-decoration: none;
     color: black;
-}
-
-*.ref > a > span {
     border: 0 solid white;
     padding: 10px 20px 10px 10px;
     border-radius: 500px;
+}
+
+*.ref > a > span {
     font-size: 20px;
     vertical-align: center;
     font-weight: bold;
+}
+
+*.ref > a:hover {
+    background-color: rgba(255, 160, 122, 0.3);
+    color: tomato;
 }
 
 .avatar {
@@ -254,11 +284,6 @@ span {
 .chirik-button:hover {
     background-color: #e2583b;
     border-color: #e2583b;
-}
-
-*.ref > a > span:hover {
-    background-color: rgba(255, 160, 122, 0.3);
-    color: tomato;
 }
 
 .active {
@@ -313,6 +338,20 @@ span {
 
 .search{
     padding: 12px 10px 12px 10px;
+    flex-direction: row;
+}
+
+.search > label{
+    padding-right: 5px;
+    width: max-content;
+}
+
+.search > input{
+    width: min-content;
+    outline: none;
+    border: 0;
+    height: 100%;
+    background-color: initial;
 }
 
 .hashtag{

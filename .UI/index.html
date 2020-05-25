@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="styles.css">
     <script src="https://kit.fontawesome.com/67e29cc289.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
     <meta charset="UTF-8">
     <title>Chirik</title>
 </head>
 <body style="margin: 0; height: 100%">
 
+
+<header>
 <div class="top">
     <div class="bar">
         <div class="left " style="margin-top: 0">
@@ -21,11 +25,11 @@
         </div>
     </div>
 </div>
-<header class="left full-height">
+<div class="left full-height">
     <div class="full-height">
         <div class="full-height navigation inside">
             <nav class="ref inside centered">
-                <a href="#Main"><span class="active"><i class="fas fa-home icon"></i>Главная</span></a>
+                <a href="#Main"><i class="fas fa-home icon active"></i><span class="active">Главная</span></a>
                 <a href="#Main"><span><i class="fas fa-user-alt icon"></i>Профиль</span></a>
                 <a href="#Main"><span><i class="far fa-bell icon"></i>Уведомления</span></a>
                 <a href="#Main"><span><i class="fas fa-ellipsis-h icon"></i>Ещё</span></a>
@@ -33,16 +37,18 @@
             </nav>
         </div>
     </div>
+</div>
 </header>
-<main class="center full-height">
+<main>
+<div class="center full-height">
     <div class="full-height" style="position: relative">
         <div class="poll-content">
             <div class="chirik-field">
                 <img src="zZuTNe0PW34.jpg" class="avatar" alt="gf">
                 <div class="chirik-content">
-                    <div class="input-field">
-                        <span>Текст</span>
-                    </div>
+                    <form class="input-field" id="NewChirik">
+                        <input placeholder="Текст">
+                    </form>
                     <div style="display:flex; flex-direction: row; justify-content: space-between;">
                         <div style="margin-top: 6px;"><span style="font-size: 20px" class="chirik-additions">
                             <a href="#Image"><i class="far fa-image"></i></a>
@@ -50,7 +56,7 @@
                             <a href="#Poll"><i class="fas fa-poll-h"></i></a></span>
                         </div>
                         <div>
-                            <button class="chirik-button" style="padding: 6px 10px 6px 10px; margin-right: 5px">
+                            <button form="NewChirik" class="chirik-button" style="padding: 6px 10px 6px 10px; margin-right: 5px">
                                 <span>Чирикнуть</span></button>
                         </div>
                     </div>
@@ -328,10 +334,13 @@
         </div>
         <div class="poll-content"><a href="#ShowMore" class="show"><span>Показать ещё</span></a></div>
     </div>
+</div>
 </main>
 <div class="right full-height">
     <div class="full-height relevant">
-        <div class="box search"><span><i class="fas fa-search" style="padding-right: 5px"></i>Искать</span></div>
+        <form class="box search"><label for="search"><i class="fas fa-search"></i></label>
+            <input placeholder="Искать" id="search" name="search">
+        </form>
         <div class="box">
             <div class="left-align" style="padding: 8px 0 8px 10px"><span class="bold">Актуальные хэштэги</span></div>
             <ol class="popular-hashtags">
