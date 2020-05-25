@@ -12,12 +12,12 @@
         },
         {
             id: '2',
-            description: "Как же хорошо, что у меня наконец появилось время подтянуть#NeHochuSessiu все свои долги!",
+            description: "Как же хорошо, что у меня наконец появилось время подтянуть#NeHochuSessiu все свои долги#foo",
             createdAt: new Date('2020-05-03T18:31:00'),
             author: "ar_kud",
             name: "Artsiom Kudryavtsev",
             photoLink: "zZuTNe0PW34.jpg",
-            hashtags: [],
+            hashtags: ["#NeHochuSessiu","#foo"],
             likes: ["ar_kud"]
         },
         {
@@ -241,7 +241,7 @@
                     if (!Array.isArray(item.hashtags))
                         return false;
 
-                    filterConfig.hashtags.some(function (hashtag){
+                    return filterConfig.hashtags.some(function (hashtag){
                         return item.hashtags.includes(hashtag);
                     });
                 });
@@ -250,7 +250,7 @@
             if (filterConfig.timeSort) {
                 result = result.sort((a, b) => a.createdAt - b.createdAt);
             } else if (filterConfig.nameSort) {
-                result = result.sort((a, b) => a.name > b.name);
+                result = result.sort((a, b) => (a.name > b.name));
             }
 
             console.log("get _posts, skipping " + skip + ", getting " + top + ", filtered by: "
@@ -291,8 +291,8 @@
         }
 
         static updateHashtags(post) {
-            let hashtagRegExp = /#\S+/;
-            post.hashtags = hashtagRegExp.exec(post.description);
+            let hashtagRegExp = /#\S+/g;
+            post.hashtags = Array.from(post.description.matchAll(hashtagRegExp)).flat(1);
             if (post.hashtags)
                 post.hashtags = post.hashtags.filter((elem, index) => post.hashtags
                     .indexOf(elem) === index);
@@ -348,17 +348,17 @@
             this._deleted_posts = [];
             console.log("Removed all elements");
         }
-    };
+    }
 
     let test = new ChirikList(posts);
     test.getPost("1");
     test.removePost("1");
     test.getPost("1");
-    test.addPost({id: "1", description: "zzz", createdAt: new Date(), author: "gtr", name: "You"});
-    test.getPost("1");
-    test.editPost("1", {description: "ddd"});
-    test.editPost("1", {createdAt: new Date()});
-    test.editPost("1", {likes: ["ar_kud"]});
+    test.addPost({id: "21", description: "#foo zzz#dll", createdAt: new Date(), author: "gtr", name: "You"});
+    test.getPost("21");
+    test.editPost("21", {description: "ddd"});
+    test.editPost("21", {createdAt: new Date()});
+    test.editPost("21", {likes: ["ar_kud"]});
     console.log(test.getPosts(undefined, undefined, {timeSort: true})[0].createdAt);
     console.log(test.getPosts(undefined, undefined, {nameSort: true})[0].name);
     console.log(test.getPosts(undefined, undefined, {hashtags: ["#NeHochuSessiu"]})[0].hashtags[0]);
