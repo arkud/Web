@@ -238,12 +238,12 @@
 
             if (filterConfig.hashtags) {
                 result = result.filter(function (item) {
-                    if (item.hashtags === null || item.hashtags === undefined)
+                    if (!Array.isArray(item.hashtags))
                         return false;
-                    for (let i = 0; i < filterConfig.hashtags.length; i++) {
-                        if (item.hashtags.includes(filterConfig.hashtags[i]))
-                            return true;
-                    }
+
+                    filterConfig.hashtags.some(function (hashtag){
+                        return item.hashtags.includes(hashtag);
+                    });
                 });
             }
 
@@ -314,8 +314,6 @@
                 console.log("restricted fields cannot be changed");
                 return false;
             }
-            if (!ChirikList.validatePost(this.getPost(id)))
-                return false;
 
             let index = this._posts.findIndex(element => element.id === id);
             if (post.description) {
