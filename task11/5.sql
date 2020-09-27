@@ -1,0 +1,3 @@
+INSERT INTO test(id,count)
+SELECT USER_ID, COUNT(*) as count FROM POST GROUP BY USER_ID ;
+SELECT * FROM test WHERE count>3;
